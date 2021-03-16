@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Source Files Same for projects  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" /> 
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    
+    <!-- Title Infomation -->
+    <title>Weather</title>
+        
+    <!-- code to CSS file -->
+    <link rel="stylesheet" href="styling.css">
+    <!--Code to Jvascript File-->
+     <script src="js.js"></script>
+
+    
+</head>
+<body>
+    <!--Title-->
+    <div class="container-fluid right-center" style="background-color:#404040 ;color: white;">
+        <h1> <strong>Weather Dashboard for Current and 5 Day Forecast</strong></h1>
+    </div>
+    <div class="container">
+
+        <!-- searching a city-->
+        <div class="row">
+            <div class="col-sm-4">
+
+                <!--Searching a City -->
+                <h4 class="pt-1"><strong>Search for a City:</strong></h4>
+
+                <!-- Search city Name-->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control"id="search-city" aria-label="City Search" aria-describedby="search-button">
+                    <div class="input-group-append">
+                        <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+
+                <!--section for search city history-->
+                <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
+                <ul class="list-group">
+
+                </ul>
+            </div>   
+            <div class="col-sm-8">
+                <div class="row ml-2 border border-dark rounded">
+                    <div class="col-sm-12" id="current-weather">
+                        <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+                        <p>Temperature:<span class="current" id="temperature"></span></p>
+                        <p>Humidity:<span class="current" id="humidity"></span></p> 
+                        <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+                        <p>UV index:<span class="current bg-danger rounded py-2 px-2 text-white" id="uv-index"></span></p> 
+                    </div>
+                </div> 
+
+                <!--5 day forcast Infomation-->
+                <div class="col-sm-12" id ="future-weather">
+                    <h3>5-Day Forecast:</h3>
+                    <div class="row text-light">
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+                            <p id="fDate0"></p>
+                            <p id="fImg0"></p>
+                            <p>Temp:<span id="fTemp0"></span></p>
+                            <p>Humidity:<span id="fHumidity0"></span></p>
+                        </div>  
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+                            <p id="fDate1"></p>
+                            <p id="fImg1"></p>
+                            <p>Temp:<span id="fTemp1"></span></p>
+                            <p>Humidity:<span id="fHumidity1"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate2"></p>
+                            <p id="fImg2"></p>
+                            <p>Temp:<span id="fTemp2"></span></p>
+                            <p>Humidity:<span id="fHumidity2"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                            <p id="fDate3"></p>
+                            <p id="fImg3"></p>
+                            <p>Temp:<span id="fTemp3"></span></p>
+                            <p>Humidity:<span id="fHumidity3"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+                            <p id="fDate4"></p>
+                            <p id="fImg4"></p>
+                            <p>Temp:<span id="fTemp4"></span></p>
+                            <p>Humidity:<span id="fHumidity4"></span></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Common Code Files  -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script> -->
+</html>
