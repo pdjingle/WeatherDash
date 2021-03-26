@@ -1,3 +1,4 @@
+$(document).ready(function(){
 // / /Variable declaired and city is searched and stored
 var city = "";
 var searchCity = $("#search-city");
@@ -10,7 +11,7 @@ var currentCity = $("#current-city");
 var currentHumidty = $("#humidity");
 var sCity = [];
 
-$(document).ready(function(){
+
 //The search function to find out if the city is within the database 
 function find(c) {
     for (var i = 0; i < sCity.length; i++) {
